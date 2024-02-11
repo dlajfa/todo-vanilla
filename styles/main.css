@@ -1,0 +1,76 @@
+@import "reset.css";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 16px 0;
+  text-align: center;
+}
+
+#app {
+  width: 80%;
+  min-width: 300px;
+  max-width: 450px;
+  margin: 0 auto;
+
+  .item-container,
+  .input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-gap: 8px;
+    padding: 8px;
+    margin: 8px 0;
+    place-items: center;
+  }
+
+  .checked {
+    display: none;
+  }
+
+  .unchecked {
+    display: block;
+  }
+
+  .done {
+    .checked {
+      display: block;
+    }
+    .unchecked {
+      display: none;
+    }
+    .item {
+      text-decoration: line-through;
+    }
+  }
+
+  .delete {
+    display: none;
+  }
+
+  .item-container:hover {
+    background-color: aliceblue;
+    border-radius: 8px;
+
+    .item {
+      background-color: aliceblue;
+    }
+
+    .delete {
+      display: block;
+    }
+  }
+
+  .item {
+    width: 100%;
+    line-height: 2em;
+    justify-self: start;
+    border: 0;
+  }
+
+  .item:focus {
+    outline: 0;
+  }
+}
